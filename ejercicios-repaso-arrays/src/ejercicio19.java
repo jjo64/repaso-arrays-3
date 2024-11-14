@@ -35,15 +35,25 @@ public class ejercicio19 {
 
             if (vector[i] > valorMaximo) {
                 valorMaximo = vector[i];
-                if (vector[i] == valorMinimo) {
-                    contadorMaximo++;
-                }
+            } else if (vector[i] == valorMaximo) {
+                contadorMaximo++;
+            }
+
+            if (vector[i] < valorMinimo) {
+                valorMinimo = vector[i];
+            } else if (vector[i] == valorMinimo) {
+                contadorMinimo++;
+            }
+        }
+
+        for (int i = 0; i < vector.length; i++) {
+            if (vector[i] == valorMaximo) {
                 posicionMaximo = i;
             }
         }
 
         for (int i = 0; i < vector.length; i++) {
-            sumaTotal += vector[i];
+            sumaTotal = sumaPositivos + sumaNegativos;
         }
 
         System.out.println("La cantidad de numeros positivos son: " + positivos + " y la suma de todos ellos: " + sumaPositivos);
